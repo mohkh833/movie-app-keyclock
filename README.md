@@ -4,8 +4,6 @@
 
 ## 📌 Overview
 
-This is a **Movie Management Application** built as part of the Associate Software Engineer role assessment. The application consists of two dashboards:
-
 * **Admin Dashboard**: Allows admin users to search for movies via the **OMDB API**, add/remove movies to the database, perform **batch add/delete**, and manage the movie collection.
 * **Regular User Dashboard**: Allows regular users to view the movie list added by the admin and see detailed information about each movie.
 
