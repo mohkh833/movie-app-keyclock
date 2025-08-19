@@ -1,11 +1,4 @@
-Perfect 👍 You want me to **update your README file** to include the new features:
 
-* **Batch Add & Batch Delete** (Admin feature)
-* **Authentication using Keycloak**
-
-Here’s the revised README with those enhancements integrated:
-
----
 
 # 🎬 Movie Management Application
 
