@@ -1,0 +1,37 @@
+<div class="p-2">
+    <h2>Manage My Movies</h2>
+    <hr>
+
+    <!-- Search Bar -->
+    <input type="text" [(ngModel)]="searchTerm" placeholder="Search for movies..." />
+    <button (click)="searchMovies()">Search</button>
+
+    <!-- Display Search Results -->
+    <div *ngIf="movies.length > 0">
+        <h3>Search Results</h3>
+        <ul>
+            <li *ngFor="let movie of movies">
+                <img [src]="movie.Poster" alt="{{ movie.title }}" width="50">
+                {{ movie.Title }}
+                <button (click)="saveMovie(movie)">Save</button>
+            </li>
+        </ul>
+    </div>
+    
+
+    <hr>
+
+    <!-- Display Saved Movies -->
+    <h3>Saved Movies</h3>
+    <div *ngIf="savedMovies.length > 0">
+        <ul>
+            <li *ngFor="let movie of savedMovies">
+                <img [src]="movie.poster" alt="{{ movie.title }}" width="50">
+                {{ movie.title }}
+                <button (click)="deleteMovie(movie.id)">Delete</button>
+            </li>
+        </ul>
+    </div>
+
+    
+</div>

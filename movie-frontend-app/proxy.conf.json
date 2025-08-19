@@ -1,0 +1,11 @@
+{
+  "/api/omdb": {
+    "target": "https://www.omdbapi.com",
+    "secure": false,
+    "changeOrigin": true,
+    "logLevel": "debug",
+    "pathRewrite": {
+      "^/api/omdb": ""
+    }
+  }
+}

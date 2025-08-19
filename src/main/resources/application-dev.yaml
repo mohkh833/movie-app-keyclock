@@ -1,0 +1,53 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/book_social_network
+    username: username
+    password: password
+    driver-class-name: org.postgresql.Driver
+
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://localhost:8080/realms/movies-app
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+
+  servlet:
+    multipart:
+      max-file-size: 50MB
+
+keycloak:
+  realm: movies-app
+  auth-server-url: http://localhost:8080/
+  resource: movies-app
+  credentials:
+    secret: jlPBKsahFiAmPkWOLIkpzYG04oPdb0iv
+  admin:
+      username: admin
+      password: admin
+
+application:
+  mailing:
+    frontend:
+      activation-url: http://localhost:4200/activate-account
+  file:
+    upload:
+      photos-output-path: ./uploads
+  cors:
+    allowed-origins: http://localhost:4200
+
+springdoc:
+  default-produces-media-type: application/json
+
+server:
+  port: 8088
+  servlet:
+    context-path: /api/v1/
